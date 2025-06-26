@@ -7,6 +7,7 @@ import FeatureList from '@/components/features/FeatureList';
 import LifestyleSection from '@/components/features/LifestyleSection';
 import TestimonialSection from '@/components/testimonials/TestimonialSection';
 import NewsletterSection from '@/components/common/NewsletterSection';
+import CountdownOffer from '@/components/countdownoffer/CountdownOffer';
 
 export default function HomePage() {
   return (
@@ -17,6 +18,7 @@ export default function HomePage() {
       <FeatureList />
       <LifestyleSection />
       <TestimonialSection />
+      {/* <CountdownOffer /> */}
       {/* <NewsletterSection /> */}
     </>
   );
