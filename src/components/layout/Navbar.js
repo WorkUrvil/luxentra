@@ -6,11 +6,10 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navigation = [
-  { name: "Products", href: "#" },
-  { name: "Collections", href: "#" },
-  { name: "About", href: "#" },
-  { name: "Support", href: "#" },
-  { name: "Sign In", href: "/auth/signin" },
+  { name: 'Products', href: '#' },
+  { name: 'Collections', href: '#' },
+  { name: 'About', href: '#' },
+  { name: 'Support', href: '#' },
 ];
 
 export default function Navbar() {

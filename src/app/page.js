@@ -18,7 +18,7 @@ export default function HomePage() {
       <FeatureList />
       <LifestyleSection />
       <TestimonialSection />
-      {/* <CountdownOffer /> */}
+      <CountdownOffer />
       {/* <NewsletterSection /> */}
     </>
   );
