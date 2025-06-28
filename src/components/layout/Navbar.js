@@ -10,6 +10,7 @@ const navigation = [
   { name: 'Collections', href: '#' },
   { name: 'About', href: '#' },
   { name: 'Support', href: '#' },
+  {name: 'Sign in', href: '/auth/signin'},
 ];
 
 export default function Navbar() {
