@@ -1,14 +1,16 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { motion, AnimatePresence } from "framer-motion";
 
 const navigation = [
-  { name: 'Products', href: '#' },
-  { name: 'Collections', href: '#' },
-  { name: 'About', href: '#' },
-  { name: 'Support', href: '#' },
+  { name: "Products", href: "#" },
+  { name: "Collections", href: "#" },
+  { name: "About", href: "#" },
+  { name: "Support", href: "#" },
+  { name: "Sign In", href: "/auth/signin" },
 ];
 
 export default function Navbar() {
@@ -17,8 +19,8 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
@@ -28,23 +30,23 @@ export default function Navbar() {
           <motion.div
             initial={false}
             animate={{
-              position: scrolled ? 'relative' : 'absolute',
-              top: scrolled ? 0 : '50%',
-              left: scrolled ? 0 : '50%',
-              x: scrolled ? 0 : '-50%',
-              y: scrolled ? 0 : '-50%',
-              justifyContent: scrolled ? 'flex-start' : 'center',
-              width: scrolled ? 'auto' : '100%',
+              position: scrolled ? "relative" : "absolute",
+              top: scrolled ? 0 : "50%",
+              left: scrolled ? 0 : "50%",
+              x: scrolled ? 0 : "-50%",
+              y: scrolled ? 0 : "-50%",
+              justifyContent: scrolled ? "flex-start" : "center",
+              width: scrolled ? "auto" : "100%",
             }}
-            transition={{ type: 'spring', stiffness: 80, damping: 20 }}
+            transition={{ type: "spring", stiffness: 80, damping: 20 }}
             className="flex items-center"
           >
             <motion.a
               href="#"
               animate={{
-                fontSize: scrolled ? '1.5rem' : '2.5rem',
+                fontSize: scrolled ? "1.5rem" : "2.5rem",
               }}
-              transition={{ type: 'spring', stiffness: 100 }}
+              transition={{ type: "spring", stiffness: 100 }}
               className="font-serif font-extrabold tracking-widest uppercase drop-shadow bg-gradient-to-r from-[#0e2f2f] via-[#bfa980] to-[#e9e5d6] bg-clip-text text-transparent"
             >
               Luxentra
@@ -55,20 +57,20 @@ export default function Navbar() {
           {scrolled && (
             <div className="hidden md:flex items-center gap-8 ml-auto">
               {navigation.map((item) => (
-                <a
+                <Link
                   key={item.name}
                   href={item.href}
                   className="text-base font-medium text-[#0e2f2f] hover:text-[#bfa980] transition-colors tracking-wide uppercase px-2 py-1 rounded-lg hover:bg-[#e9e5d6]/40"
                 >
                   {item.name}
-                </a>
+                </Link>
               ))}
-              <a
+              <Link
                 href="#"
                 className="px-5 py-2 rounded-full bg-gradient-to-r from-[#bfa980] to-[#e9e5d6] text-[#0e2f2f] font-semibold shadow hover:from-[#e9e5d6] hover:to-[#bfa980] border border-[#bfa980]/30 transition-all"
               >
                 Shop Now
-              </a>
+              </Link>
             </div>
           )}
 
@@ -94,14 +96,14 @@ export default function Navbar() {
               className="md:hidden mt-2 rounded-2xl bg-white/90 dark:bg-[#0e2f2f]/95 shadow-lg p-6 flex flex-col gap-4"
             >
               {navigation.map((item) => (
-                <a
+                <Link
                   key={item.name}
                   href={item.href}
                   className="text-lg font-medium text-[#0e2f2f] hover:text-[#bfa980] transition-colors tracking-wide uppercase px-2 py-2 rounded-lg hover:bg-[#e9e5d6]/40"
                   onClick={() => setMobileOpen(false)}
                 >
                   {item.name}
-                </a>
+                </Link>
               ))}
               <a
                 href="#"
