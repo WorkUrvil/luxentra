@@ -7,7 +7,7 @@ import duration from 'dayjs/plugin/duration';
 dayjs.extend(duration);
 
 // Countdown ends in 3 days (customize as needed)
-const endTime = dayjs().add(3, 'day').endOf('day');
+const endTime = dayjs().add(100, 'day').endOf('day');
 
 export default function CountdownOffer() {
   const [timeLeft, setTimeLeft] = useState(getTimeLeft());
