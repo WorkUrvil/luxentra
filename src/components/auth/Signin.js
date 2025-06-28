@@ -181,7 +181,8 @@ const SignIn = () => {
         paddingTop: '96px',
         backgroundColor: colors.backgroundPrimary,
         display: 'flex',
-        fontFamily: "'Inter', sans-serif",
+        fontWeight: "500",
+        letterSpacing: "0.025em",
         color: colors.textPrimary,
       }}>
         <div className="left-panel" style={{
@@ -234,7 +235,8 @@ const SignIn = () => {
           backgroundColor: colors.backgroundPrimary,
         }}>
           <h1 className="heading" style={{
-            fontFamily: "'Playfair Display', serif",
+            fontWeight: "500", // font-medium like navbar navigation
+            letterSpacing: "0.025em", // tracking-wide
             fontSize: '3.5em',
             marginBottom: '40px',
             color: colors.textPrimary,
