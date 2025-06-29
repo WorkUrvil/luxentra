@@ -152,12 +152,7 @@ const Signup = () => {
     <>
       <style>
         {`
-          @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap');
-          body {
-            font-family: 'Inter', sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+          .signup-container {
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
           }
@@ -184,7 +179,7 @@ const Signup = () => {
         `}
       </style>
 
-      <div className="full-page-container" style={{
+      <div className="full-page-container signup-container" style={{
         minHeight: '100vh',
         paddingTop: '96px',
         backgroundColor: colors.backgroundPrimary,
